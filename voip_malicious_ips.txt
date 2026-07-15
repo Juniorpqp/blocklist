@@ -1,8 +1,8 @@
-# Malicious IP blocklist — for pfBlocker (Deny)
-# Source: Malcolm/Suricata+Zeek, last 30 days. Maintained by claude-wazuh.
-# SAFE-EXCLUDED: SIP trunk SBCs + any IP that carried RTP voice with the PBX + known-benign (Win Update cache, NinjaRMM).
+# VoIP/perimeter malicious IP blocklist for pfBlocker (Deny, protocol=any)
+# Generated 2026-06-23. Malcolm/Suricata+Zeek, last 30 days. Deduplicated, one IP per line.
+# Excludes SIP trunk SBCs + any RTP-voice IP + known-benign (never blocks calls).
+# 161 unique IPs. Categories: register-bruteforce=7, sip-scanner=26, web-exploit=30, cins-reputation=102 (categories overlap).
 #
-# --- sip-register-bruteforce (7) ---
 5.39.19.237
 5.39.49.245
 5.133.197.31
@@ -168,3 +168,10 @@
 45.82.56.0/24
 51.81.22.88
 185.243.5.93
+89.34.230.227
+174.101.71.150
+157.10.7.202
+202.47.56.172
+95.130.227.78
+72.255.32.198
+103.81.208.45
